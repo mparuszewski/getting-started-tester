@@ -29,6 +29,12 @@ shared_examples 'a website with sidebar' do
       end
     end
 
+    it 'should contain PEOPLE link' do
+      within '#sidebar' do
+        expect(page).to have_link('PEOPLE', href: '/people/', count: 1)
+      end
+    end
+
     it 'should contain SUMMER OF CODE link' do
       within '#sidebar' do
         expect(page).to have_link('SUMMER OF CODE', href: '/summer-of-code/', count: 1)
