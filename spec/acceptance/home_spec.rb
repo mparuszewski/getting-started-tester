@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe 'index page' do
+describe 'home page' do
 
   before do
-    visit '/'
+    visit '/home'
   end
 
   it_should_behave_like 'a website with sidebar' do

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe 'index page' do
+describe 'gst-switch project page' do
 
   before do
-    visit '/'
+    visit '/projects/gst-switch'
   end
 
   it_should_behave_like 'a website with sidebar' do
@@ -12,7 +12,8 @@ describe 'index page' do
 
   it 'should have edit link on icon to content editor' do
     within '#main' do
-      expect(page).to have_link('', href: 'http://editor.timvideos.us/#timvideos/getting-started/edit/master/Home.md')
+      expect(page).to have_link('', href: 'http://editor.timvideos.us/#timvideos/getting-started/edit/master/gst-switch.md')
     end
   end
+
 end

@@ -4,11 +4,15 @@ Bundler.setup
 require 'capybara'
 require 'capybara-webkit'
 
+Dir['./spec/support/**/*.rb'].each { |f| require f }
+
 Capybara.configure do |config|
   config.run_server        = false
   config.default_driver    = :webkit
   config.javascript_driver = :webkit
   config.app_host          = 'http://code.timvideos.us'
+
+  config.ignore_hidden_elements = false
 end
 
 RSpec.configure do |config|
